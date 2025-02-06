@@ -1,0 +1,38 @@
+<div class="text-center">
+  <!-- Video Background -->
+  <div class="video-container">
+  <video autoplay playsinline muted loop class="video-background">
+    <source src="https://vid.cdn-website.com/md/pexels/videos/insta-tennis-junior-tennis-kids-racket-8224292-v.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos HTML5.
+  </video>
+
+  <!-- Conteúdo sobreposto no vídeo -->
+    <div class="video-overlay">
+      <h1 class="display-4 text-white">Filipe Tennis</h1>
+      <p class="lead text-white">Aulas para iniciantes e avançados com um professor qualificado.</p>
+      <a href="/lessons" class="btn btn-primary btn-lg">Saiba Mais</a>
+    </div>
+  </div>
+</div>
+
+<!--Seção depoimentos-->
+<div class="container mt-5">
+  <h2 class="text-center m-4">O que dizem meus alunos?</h2>
+  <div class="row mb-2">
+    <% @testimonials.each do |testimonial| %>
+      <div class="col-md-4 mb-2">
+        <div class="card text-center">
+          <% if testimonial.photo.attached? %>
+            <img src="<%= url_for(testimonial.photo) %>" class="card-img-top rounded-circle mt-3" style="width: 100px; height: 100px; object-fit: cover; margin: auto;">
+          <% else %>
+            <img src="https://via.placeholder.com/100" class="card-img-top rounded-circle mt-3" style="width: 100px; height: 100px; object-fit: cover; margin: auto;">
+          <% end %>
+          <div class="card-body m-2">
+            <h5 class="card-title"><%= testimonial.name %></h5>
+            <p class="card-text">"<%= testimonial.content %>"</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

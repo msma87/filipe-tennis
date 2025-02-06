@@ -1,0 +1,24 @@
+<h2>Gerenciar Depoimentos</h2>
+<a href="<%= new_admin_testimonial_path %>" class="btn btn-primary">Novo Depoimento</a>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th>Aluno</th>
+      <th>Comentário</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @testimonials.each do |testimonial| %>
+      <tr>
+        <td><%= testimonial.name %></td>
+        <td><%= testimonial.content %></td>
+        <td>
+          <a href="<%= edit_admin_testimonial_path(testimonial) %>" class="btn btn-warning">Editar</a>
+          <%= button_to "Deletar", admin_testimonial_path(testimonial), method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

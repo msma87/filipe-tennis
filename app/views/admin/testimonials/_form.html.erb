@@ -1,0 +1,23 @@
+<%= form_with model: testimonial, url: testimonial.persisted? ? admin_testimonial_path(testimonial) : admin_testimonials_path, method: testimonial.persisted? ? :patch : :post, local: true, multipart: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :name, "Nome do Aluno" %>
+    <%= f.text_field :name, class: "form-control", required: true %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :content, "Depoimento" %>
+    <%= f.text_area :content, class: "form-control", required: true %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :photo, "Foto do Aluno" %>
+    <%= f.file_field :photo, class: "form-control" %>
+  </div>
+
+  <% if testimonial.photo.attached? %>
+    <p>Imagem atual:</p>
+    <img src="<%= url_for(testimonial.photo) %>" class="img-thumbnail" width="150">
+  <% end %>
+
+  <%= f.submit "Salvar", class: "btn btn-success" %>
+<% end %>

@@ -1,0 +1,129 @@
+/* Cores principais do site */
+:root {
+  --primary-color: #0275d8; /* Azul padrão */
+  --secondary-color: #ffcc00; /* Amarelo tênis */
+  --background-color: #f8f9fa;
+}
+
+/* Aplica as cores ao layout */
+body {
+  background-color: var(--background-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os itens igualmente */
+  align-items: center; /* Alinha os itens no centro */
+  padding: 10px 20px; /* Adiciona espaçamento interno */
+  background-color: #212529; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
+}
+
+.footer-links a {
+  margin: 0 10px; /* Espaço entre os links */
+  color: white; /* Mantém os links brancos */
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Efeito ao passar o mouse */
+}
+
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #025aa5;
+}
+
+
+/* Personaliza os cartões */
+.card {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre os cartões */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Define um rodapé fixo */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Container do vídeo ocupando toda a tela */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ocupa 100% da altura da tela */
+  overflow: hidden;
+}
+
+/* Configuração do vídeo como background */
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo preencha o espaço */
+  transform: translate(-50%, -50%);
+}
+
+/* Camada de sobreposição para melhor legibilidade do texto */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Efeito de escurecimento */
+  padding: 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .video-overlay {
+    padding: 10px;
+  }
+
+  .video-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .video-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* Ajuste para a foto do professor */
+img.rounded-circle {
+  width: 100%;
+  max-width: 500px;
+  border: 5px solid #ddd;
+}
+
+/* Estiliza os textos na página Sobre */
+.list-group-item {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #444;
+}

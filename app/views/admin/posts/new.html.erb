@@ -1,0 +1,14 @@
+<h2>Novo Post</h2>
+<%= form_with model: @post, url: admin_posts_path, local: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, "Título" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :content, "Conteúdo" %>
+    <%= f.text_area :content, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Salvar", class: "btn btn-success" %>
+<% end %>

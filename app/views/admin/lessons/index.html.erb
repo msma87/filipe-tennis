@@ -1,0 +1,26 @@
+<h2>Gerenciar Aulas</h2>
+<a href="/admin/lessons/new" class="btn btn-primary">Nova Aula</a>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Preço</th>
+      <th>Duração (min)</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr>
+        <td><%= lesson.title %></td>
+        <td>R$ <%= lesson.price %></td>
+        <td><%= lesson.duration %> min</td>
+        <td>
+          <a href="<%= edit_admin_lesson_path(lesson) %>" class="btn btn-warning">Editar</a>
+          <%= button_to "Deletar", admin_lesson_path(lesson), method: :delete, class: "btn btn-danger", data: { confirm: "Tem certeza?" } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

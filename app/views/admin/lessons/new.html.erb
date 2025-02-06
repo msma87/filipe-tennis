@@ -1,0 +1,24 @@
+<h2>Nova Aula</h2>
+<%= form_with model: @lesson, url: admin_lessons_path, local: true do |f| %>
+  <div class="mb-3">
+    <%= f.label :title, "Título" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :description, "Descrição" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :price, "Preço (R$)" %>
+    <%= f.number_field :price, class: "form-control", step: 0.01 %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :duration, "Duração (minutos)" %>
+    <%= f.number_field :duration, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Salvar", class: "btn btn-success" %>
+<% end %>
