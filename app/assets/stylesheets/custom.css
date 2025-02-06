@@ -1,6 +1,6 @@
 /* Cores principais do site */
 :root {
-  --primary-color: #0275d8; /* Azul padrão */
+  --primary-color: #030303; /* Azul padrão */
   --secondary-color: #ffcc00; /* Amarelo tênis */
   --background-color: #f8f9fa;
 }
@@ -63,40 +63,43 @@ footer {
   width: 100%;
 }
 
-/* Container do vídeo ocupando toda a tela */
+/* Define o container do vídeo para ocupar toda a tela */
 .video-container {
-  position: relative;
+  position: relative;  /* Permite que os elementos filhos sejam posicionados dentro */
   width: 100%;
   height: 100vh; /* Ocupa 100% da altura da tela */
-  overflow: hidden;
+  overflow: hidden; /* Esconde qualquer parte do vídeo que ultrapasse os limites */
 }
 
-/* Configuração do vídeo como background */
+/* Faz o vídeo cobrir todo o fundo sem distorção */
 .video-background {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Garante que o vídeo preencha o espaço */
-  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  min-width: 100vw; /* Garante que ocupa toda a largura */
+  min-height: 100vh; /* Garante que ocupa toda a altura */
+  transform: translate(-50%, -50%); /* Centraliza corretamente */
+  object-fit: cover; /* Faz o vídeo cobrir toda a área sem distorção */
 }
 
-/* Camada de sobreposição para melhor legibilidade do texto */
+/* Camada de sobreposição no vídeo para melhorar a legibilidade */
 .video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Efeito escuro para legibilidade */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* Efeito de escurecimento */
   padding: 20px;
 }
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
