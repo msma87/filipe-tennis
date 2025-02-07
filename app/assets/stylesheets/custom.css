@@ -59,6 +59,11 @@ h1, h3 {
   min-height: 250px;
   height: auto !important;
   padding: 15px;
+  display: block;
+  min-height: 200px;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 }
 
 
@@ -203,4 +208,16 @@ img.rounded-circle {
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch; /* Mantém altura igual para os cards */
+}
+
+.container.mt-5 {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
