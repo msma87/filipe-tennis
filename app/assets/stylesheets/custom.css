@@ -5,14 +5,16 @@
   --background-color: #f8f9fa;
 }
 
+
+
 /* Aplica as cores ao layout */
 body {
   background-color: var(--background-color);
   font-family: 'Poppins', sans-serif;
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
+h1, h3 {
+  color: #f8f9fa;
 }
 
 .footer-container {
@@ -41,19 +43,25 @@ h1, h2, h3 {
 }
 
 .btn-primary:hover {
-  background-color: #025aa5;
+  background-color: var(--primary-color);
+  border-color: white; /* Borda branca ao passar o mouse */
 }
 
 
-/* Personaliza os cartões */
+/* Seção de Depoimentos */
 .card {
-  border-radius: 10px;
-  transition: transform 0.3s;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 50px;
 }
 
-/* Efeito ao passar o mouse sobre os cartões */
 .card:hover {
   transform: scale(1.05);
+}
+
+.card img {
+  border: 3px solid #007bff;
 }
 
 /* Define um rodapé fixo */
@@ -100,6 +108,27 @@ footer {
   padding: 20px;
 }
 
+/* Estilização da seção Sobre */
+.sobre-container {
+  margin: auto;
+  padding: 40px 20px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 50px;
+}
+
+.sobre-container .row {
+  align-items: center;
+}
+
+.sobre-container img {
+  max-width: 250px;
+  width: 100%;
+  border: 5px solid #007bff;
+}
+
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
@@ -114,19 +143,44 @@ footer {
   .video-overlay p {
     font-size: 1rem;
   }
+
+  .sobre-container img {
+    max-width: 200px;
+  }
 }
 
 /* Ajuste para a foto do professor */
 img.rounded-circle {
   width: 100%;
   max-width: 500px;
-  border: 5px solid #ddd;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #030303; /* Efeito de borda colorida */
 }
 
-/* Estiliza os textos na página Sobre */
-.list-group-item {
-  background: transparent;
-  border: none;
-  font-size: 1rem;
-  color: #444;
+/* Tabela Responsiva */
+.table-container {
+  max-width: 800px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 14px;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+ /* Seção principal */
+ .pricing-section {
+  padding: 60px 20px;
+}
+
+.contact-section {
+  padding: 60px 20px;
 }

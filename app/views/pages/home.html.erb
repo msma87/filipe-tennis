@@ -8,49 +8,45 @@
 
     <!-- Conteúdo sobreposto no vídeo -->
     <div class="video-overlay">
-      <h1 class="display-4 text-white">Filipe Tennis</h1>
-      <p class="lead text-white">Aulas de tênis para todas as idades e níveis.</p>
+      <h1 class="display-4">Filipe Tennis</h1>
+      <h3 class="lead">Aulas de tênis para todas as idades e níveis.</p>
       <a href="/lessons" class="btn btn-primary btn-lg">Saiba Mais</a>
     </div>
   </div>
 </div>
 
-
-
-
-  <section class="container my-5">
-  <div class="row align-items-center">
-    <!-- Coluna da Imagem (Esquerda) -->
-    <div class="col-md-4 text-center order-md-1 mb-4">
+<!-- Seção Sobre -->
+<div class="sobre-container">
+  <div class="row">
+    <!-- Coluna da Imagem -->
+    <div class="col-md-4 text-center mb-4">
       <img src="https://res.cloudinary.com/ddbg7qknd/image/upload/v1738856819/Filipe_Tennis_sdzm3v.png"
            alt="Professor Filipe"
            class="rounded-circle shadow-lg img-fluid">
     </div>
 
-    <!-- Coluna do Texto e Botão (Direita) -->
-    <div class="col-md-8 text-md-start order-md-2">
-      <h2>Sobre o Professor</h2>
-      <p class="mb-4 mt-4">Filipe é um professor qualificado, com experiência em ensinar desde iniciantes até atletas de competição. Suas aulas são personalizadas e contam com materiais de alta qualidade.</p>
+    <!-- Coluna do Texto -->
+    <div class="col-md-8" style="color: black;">
+      <h2><strong>Sobre o Professor</strong></h2>
+      <h4 class="mb-4 mt-4">Filipe é um professor qualificado, com experiência em ensinar desde iniciantes até atletas de competição. Suas aulas são personalizadas e contam com materiais de alta qualidade.</h4>
       <a href="<%= about_path %>" class="btn btn-primary">Saiba Mais</a>
     </div>
   </div>
-</section>
+</div>
 
-
-
-<!--Seção depoimentos-->
+<!-- Seção Depoimentos -->
 <div class="container mt-5">
-  <h2 class="text-center m-4">O que dizem meus alunos?</h2>
-  <div class="row mb-2">
+  <h2 class="text-center m-4"><strong>O que dizem os alunos?</strong></h2>
+  <div class="row">
     <% @testimonials.each do |testimonial| %>
-      <div class="col-md-4 mb-2">
+      <div class="col-md-4 col-sm-6 mb-4">
         <div class="card text-center">
           <% if testimonial.photo.attached? %>
             <img src="<%= url_for(testimonial.photo) %>" class="card-img-top rounded-circle mt-3" style="width: 100px; height: 100px; object-fit: cover; margin: auto;">
           <% else %>
             <img src="https://via.placeholder.com/100" class="card-img-top rounded-circle mt-3" style="width: 100px; height: 100px; object-fit: cover; margin: auto;">
           <% end %>
-          <div class="card-body m-2">
+          <div class="card-body">
             <h5 class="card-title"><%= testimonial.name %></h5>
             <p class="card-text">"<%= testimonial.content %>"</p>
           </div>
