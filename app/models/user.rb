@@ -3,8 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  # Adiciona autenticação do Devise
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   # Define se o usuário é administrador
   def admin?
