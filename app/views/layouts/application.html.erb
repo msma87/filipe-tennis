@@ -80,7 +80,8 @@
         <% end %>
 
         <li class="nav-item">
-          <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link", data: { turbo_method: :delete } %>
+          <%= link_to "Sair", destroy_user_session_path, method: :delete, data: { turbo: false }, class: "nav-link" %>
+
         </li>
       <% else %>
         <li class="nav-item">
