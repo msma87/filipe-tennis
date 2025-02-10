@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, skip: [:registrations] # Se quiser evitar a opção de registrar novos usuários
 
   get 'pages/home'
   get 'pages/about'
@@ -21,9 +21,9 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   # Define rotas para páginas estáticas
-  get 'about', to: 'pages#about'
-  get 'lessons', to: 'pages#lessons'
-  get 'contact', to: 'pages#contact'
+  get "/about", to: "pages#about", as: "about"
+  get "/lessons", to: "pages#lessons", as: "lessons"
+  get "/contact", to: "pages#contact", as: "contact"
 
   # # Rota para processar o formulário de contato
   # post 'contact', to: 'pages#send_message'
