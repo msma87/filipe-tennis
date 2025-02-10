@@ -1,0 +1,28 @@
+=> 
+[[32m#<Testimonial:0x00007efc96865148[0m
+  id: [34m[1m3[0m,
+  name: [31m[1m"[0m[31mRafael N.[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mAprendi muito com o Filipe e agora participo de torneios![0m[31m[1m"[0m,
+  created_at:
+   Thu, 06 Feb 2025 19:19:16.803513000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 19:44:08.241162000 UTC +00:00[32m>[0m,
+ [32m#<Testimonial:0x00007efc96865008[0m
+  id: [34m[1m1[0m,
+  name: [31m[1m"[0m[31mRoger F.[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mAs aulas do Filipe me ajudaram a melhorar minha técnica rapidamente![0m[31m[1m"[0m,
+  created_at:
+   Thu, 06 Feb 2025 19:18:47.313186000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 19:44:27.340462000 UTC +00:00[32m>[0m,
+ [32m#<Testimonial:0x00007efc96864ec8[0m
+  id: [34m[1m2[0m,
+  name: [31m[1m"[0m[31mAryna S.[0m[31m[1m"[0m,
+  content:
+   [31m[1m"[0m[31mProfessor atencioso e com ótimos treinos. Recomendo![0m[31m[1m"[0m,
+  created_at:
+   Thu, 06 Feb 2025 19:19:02.192917000 UTC +00:00,
+  updated_at:
+   Thu, 06 Feb 2025 19:44:40.122279000 UTC +00:00[32m>[0m]
