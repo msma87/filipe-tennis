@@ -59,35 +59,36 @@
     <!-- Itens do menu -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a> <!-- Corrigido -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">Sobre</a> <!-- Verifique se existe a página "/about" -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/lessons">Aulas</a> <!-- Ajuste conforme necessário -->
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contato</a> <!-- Ajuste conforme necessário -->
-        </li>
-        <% if user_signed_in? %>
-          <% if current_user.admin? %>
-            <li class="nav-item">
-              <a class="nav-link" href="/admin">Admin</a>
-            </li>
-          <% end %>
-          <% if user_signed_in? %>
-            <li class="nav-item">
-              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %>
-            </li>
-          <% end %>
-        <% else %>
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">Sobre</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/lessons">Aulas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contato</a>
+      </li>
+
+      <% if user_signed_in? %>
+        <% if current_user.respond_to?(:admin?) && current_user.admin? %>
           <li class="nav-item">
-            <a class="nav-link" href="/users/sign_in">Login</a>
+            <a class="nav-link" href="/admin">Admin</a>
           </li>
         <% end %>
-      </ul>
+
+        <li class="nav-item">
+          <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/sign_in">Login</a>
+        </li>
+      <% end %>
+    </ul>
+
     </div>
   </div>
 </nav>
