@@ -28,6 +28,9 @@
 
   <!-- Inclusão FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+
 </head>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -68,6 +71,22 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contato</a> <!-- Ajuste conforme necessário -->
         </li>
+        <% if user_signed_in? %>
+          <% if current_user.admin? %>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin">Admin</a>
+            </li>
+          <% end %>
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          <% end %>
+        <% else %>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/sign_in">Login</a>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

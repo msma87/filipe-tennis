@@ -2,3 +2,8 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 //= require bootstrap
+import Rails from "@rails/ujs"
+Rails.start()
+//= require rails-ujs
+//= require turbolinks
+
