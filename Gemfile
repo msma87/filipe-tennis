@@ -75,3 +75,5 @@ gem "bootstrap", "~> 5.3.3"
 gem "sassc-rails", "~> 2.1"
 
 gem "devise", "~> 4.9"
+
+gem "cloudinary", "~> 2.2"
