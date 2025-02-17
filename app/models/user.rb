@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   # Define se o usuário é administrador
-  def admin?
-    self.role == "admin"
-  end
+  # def admin?
+  #   self.role == "admin"
+  # end
 end

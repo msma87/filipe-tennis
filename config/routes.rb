@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users, skip: [:registrations], controllers: {
-    sessions: 'users/sessions'
-  }
-   # Se quiser evitar a opção de registrar novos usuários
+  devise_for :users
+
+
+  get '/users/sign_in', to: 'sessions#new'
+  post '/users/sign_in', to: 'sessions#create'
 
   # get 'pages/home'
   # get 'pages/about'
@@ -12,7 +13,8 @@ Rails.application.routes.draw do
   # Rota do painel administrativo
   namespace :admin do
     get '/', to: 'dashboard#index'
-    resources :posts, :testimonials, :lessons
+    resources :posts, :testimonials, :lessons, :users
+
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

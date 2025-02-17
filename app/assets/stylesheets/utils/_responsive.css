@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+  .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .col-sm-12 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .sobre-container img {
+    max-width: 200px;
+  }
+
+  .sobre-container h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-container .lead {
+    font-size: 1rem;
+  }
+
+  .skills-title {
+    font-size: 1.25rem;
+  }
+
+  .skill-item {
+    font-size: 0.9rem;
+  }
+}

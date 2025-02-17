@@ -1,2 +1,20 @@
 @import "bootstrap";
 @import "custom";
+
+/* Importação dos arquivos organizados */
+@import "base/variables";
+@import "base/global";
+
+@import "components/buttons";
+@import "components/cards";
+@import "components/footer";
+@import "components/navbar";
+
+@import "sections/hero";
+@import "sections/about";
+@import "sections/testimonials";
+@import "sections/pricing";
+@import "sections/contact";
+
+@import "utils/responsive";
+@import "utils/helpers";
