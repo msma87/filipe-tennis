@@ -8,9 +8,8 @@ Rails.application.routes.draw do
 
   # Rota do painel administrativo
   namespace :admin do
-    get '/', to: 'dashboard#index'
+    root 'dashboard#index'
     resources :posts, :testimonials, :lessons, :users
-
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
