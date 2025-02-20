@@ -1,4 +1,5 @@
-class TurboDeviseController < ApplicationController
+class TurboDeviseController < ActionController::Base
+  include Devise::Controllers::Helpers
   class Responder < ActionController::Responder
     def to_turbo_stream
       if get?
