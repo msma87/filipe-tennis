@@ -47,7 +47,7 @@ class TurboDeviseController < ApplicationController
   def after_sign_in_path_for(resource)
     stored_location_for(resource) ||
       if resource.admin?
-        admin_path
+        admin_root_path
       else
         root_path
       end

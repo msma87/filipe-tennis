@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   # Define if user is administrator
   def admin?
-    admin == true
+    admin.present? && admin == true
   end
 end
