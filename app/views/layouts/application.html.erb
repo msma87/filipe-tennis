@@ -26,14 +26,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Inclusão do JavaScript do Rails -->
-  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  <%= javascript_importmap_tags %>
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.scrollTo(0, 0); // Garante que a página carregue no topo
-    document.body.style.overflowY = "auto"; // Ativa a rolagem
-  });
-</script>
 
 <body>
 
@@ -72,7 +66,7 @@
         <% end %>
 
         <li class="nav-item">
-          <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          <%= button_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link", form_class: "d-inline" %>
         </li>
       <% else %>
         <li class="nav-item">

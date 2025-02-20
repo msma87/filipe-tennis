@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # Define se o usuário é administrador
-  # def admin?
-  #   self.role == "admin"
-  # end
+  # Define if user is administrator
+  def admin?
+    admin == true
+  end
 end
