@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
 
-
-  get '/users/sign_in', to: 'sessions#new'
-  post '/users/sign_in', to: 'sessions#create'
-
   # get 'pages/home'
   # get 'pages/about'
   # get 'pages/lessons'

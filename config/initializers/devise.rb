@@ -266,7 +266,15 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html, :turbo_stream]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = [:delete, :get]
+
+  # Configure the parent controller
+  config.parent_controller = 'TurboDeviseController'
+
+  # Configure the default scope given to Warden
+  config.warden do |manager|
+    manager.default_strategies(scope: :user).unshift :database_authenticatable
+  end
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
