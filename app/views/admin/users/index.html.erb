@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Usuários</h1>
+    <%= link_to "Novo Usuário", new_admin_user_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Admin?</th>
+          <th>Criado em</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.admin? ? "Sim" : "Não" %></td>
+            <td><%= l user.created_at, format: :short %></td>
+            <td>
+              <% if user.locked_at? %>
+                <span class="badge bg-danger">Bloqueado</span>
+              <% else %>
+                <span class="badge bg-success">Ativo</span>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to "Editar", edit_admin_user_path(user), class: "btn btn-sm btn-outline-primary" %>
+              <% unless user == current_user %>
+                <%= button_to "Excluir", admin_user_path(user), method: :delete,
+                    class: "btn btn-sm btn-outline-danger",
+                    form: { class: "d-inline" },
+                    data: { turbo_confirm: "Tem certeza?" } %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
