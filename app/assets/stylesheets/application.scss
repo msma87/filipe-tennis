@@ -18,3 +18,22 @@
 
 @import "utils/responsive";
 // @import "utils/helpers";
+
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000 !important;
+}
+
+.navbar-toggler {
+  z-index: 1001 !important; /* Ensure toggler is above other elements */
+}
+
+.navbar-collapse {
+  z-index: 1000 !important; /* Match navbar z-index */
+}
+
+body {
+  padding-top: 76px; /* Add padding to prevent content from being hidden behind navbar */
+}
