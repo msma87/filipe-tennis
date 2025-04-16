@@ -78,7 +78,6 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: filipe_tennis_production
-  username: filipe_tennis
-  password: <%= ENV["FILIPE_TENNIS_DATABASE_PASSWORD"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  pool: 5
+
