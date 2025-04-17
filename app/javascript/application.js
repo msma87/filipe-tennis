@@ -1,6 +1,8 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
+// importe scripts personalizados se tiver
+// import "./custom"
 
 // Configure Turbo to handle Devise's sign out
 document.addEventListener("turbo:before-fetch-request", (e) => {

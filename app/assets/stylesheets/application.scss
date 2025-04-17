@@ -1,9 +1,10 @@
 @import "bootstrap";
-// @import "custom";
+@import "custom";
 
 /* Importação dos arquivos organizados */
 @import "base/variables";
 @import "base/global";
+
 
 @import "components/buttons";
 @import "components/cards";
@@ -15,9 +16,11 @@
 @import "sections/testimonials";
 // @import "sections/pricing";
 // @import "sections/contact";
+// @import "sections/home";
 
 @import "utils/responsive";
 // @import "utils/helpers";
+// @import "utils/variables";
 
 .navbar {
   position: fixed !important;
