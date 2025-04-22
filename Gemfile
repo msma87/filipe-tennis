@@ -77,3 +77,5 @@ gem "sassc-rails", "~> 2.1"
 gem "devise", "~> 4.9"
 
 gem "cloudinary", "~> 2.2"
+
+gem "tailwindcss-rails"
