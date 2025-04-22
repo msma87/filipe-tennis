@@ -1,6 +1,6 @@
 <div class="text-center">
   <!-- Video Background -->
-  <div class="video-container">
+  <div class="video-container mt-0 pt-0">
     <video autoplay playsinline muted loop class="video-background">
       <source src="https://vid.cdn-website.com/md/pexels/videos/insta-tennis-junior-tennis-kids-racket-8224292-v.mp4" type="video/mp4">
       Seu navegador não suporta vídeos HTML5.
@@ -35,8 +35,8 @@
 </div>
 
 <!-- Seção Depoimentos -->
-<div class="container-fluid mt-5">
-  <h2 class="text-center m-4"><strong>O que dizem os alunos?</strong></h2>
+<div class="container-fluid my-5">
+  <h2 class="text-center m-3"><strong>O que dizem os alunos?</strong></h2>
   <div class="row">
     <% @testimonials.each do |testimonial| %>
       <div class="col-md-4 col-sm-6 mb-4">
@@ -47,7 +47,7 @@
             <img src="https://via.placeholder.com/100" class="card-img-top rounded-circle mt-3" style="width: 100px; height: 100px; object-fit: cover; margin: auto;">
           <% end %>
           <div class="card-body">
-            <h5 class="card-title"><%= testimonial.name %></h5>
+            <h5 class="card-title mb-1"><%= testimonial.name %></h5>
             <p class="card-text"><em><%= testimonial.content %></em></p>
           </div>
         </div>

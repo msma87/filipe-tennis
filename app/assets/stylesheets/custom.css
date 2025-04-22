@@ -1,4 +1,18 @@
 /* Custom styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* evita rolagem lateral acidental */
+}
+
 body {
   padding-bottom: 70px; /* garante que nada fique atrás do rodapé */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 120px; /* altura do rodapé fixo */
 }
