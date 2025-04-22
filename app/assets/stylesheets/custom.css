@@ -1,1 +1,4 @@
 /* Custom styles */
+body {
+  padding-bottom: 70px; /* garante que nada fique atrás do rodapé */
+}
