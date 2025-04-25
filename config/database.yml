@@ -78,8 +78,5 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  url: <%= ENV["DATABASE_URL"] %>
 

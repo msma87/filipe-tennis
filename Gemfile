@@ -78,7 +78,4 @@ gem "devise", "~> 4.9"
 
 gem "cloudinary", "~> 2.2"
 
-group :production do
-  gem 'sqlite3', '~> 1.6'
-end
 
